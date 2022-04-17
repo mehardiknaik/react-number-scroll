@@ -1,0 +1,29 @@
+# react-number-scroll
+
+> groww style number animation
+
+[![NPM](https://img.shields.io/npm/v/react-number-scroll.svg)](https://www.npmjs.com/package/react-number-scroll) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## Install
+
+```bash
+npm install --save react-number-scroll
+```
+
+## Usage
+
+```tsx
+import React, { Component } from 'react'
+
+import { NumberScroll } from 'react-number-scroll'
+
+class Example extends Component {
+  render() {
+    return <NumberScroll number={444} />
+  }
+}
+```
+
+## License
+
+MIT © [Hardik Naik](https://github.com/mehardiknaik)
