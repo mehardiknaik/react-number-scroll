@@ -5,6 +5,8 @@
 .babelrc
 babel.config.js
 .gitignore
+.gitattributes
+rollup.config.js
 .prettierrc
 prettier.config.js
 tsconfig.*
@@ -14,6 +16,7 @@ jest.*
 webpack.*
 docs
 yarn-*
+LICENSE
 __*
 src
 internal

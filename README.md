@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-number-scroll
+npm i @hardiknaik/react-number-scroll
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-number-scroll
 ```tsx
 import React, { Component } from 'react'
 
-import { NumberScroll } from 'react-number-scroll'
+import { NumberScroll } from "@hardiknaik/react-number-scroll";
 
 class Example extends Component {
   render() {

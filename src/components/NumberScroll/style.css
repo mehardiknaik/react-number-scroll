@@ -1,62 +1,59 @@
 .number-scroll-view {
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: row-reverse;
-    overflow: hidden;
-    font-size: 56px;
-    position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  overflow: hidden;
+  font-size: 56px;
+  position: relative;
+  color: black;
+}
+
+.number-placeholder {
+  visibility: hidden;
+}
+
+.number-scroll-column-container {
+  position: relative;
+}
+
+.number-scroll-column {
+  position: absolute;
+  height: 1000%;
+  bottom: 0;
+  transition: transform 500ms cubic-bezier(0.37, 0.37, 0.11, 1.25);
+}
+
+.number-scroll-digit {
+  height: 10%;
+}
+
+.number-scroll-column.increase {
+  animation: pulseGreen 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+}
+
+.number-scroll-column.decrease {
+  animation: pulseRed 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+}
+
+@keyframes pulseGreen {
+  0%,
+  100% {
     color: black;
   }
-  
-  .number-placeholder {
-    visibility: hidden;
-  }
-  
-  .number-scroll-column-container {
-    position: relative;
-  }
-  
-  .number-scroll-column {
-    position: absolute;
-    height: 1000%;
-    bottom: 0;
-    transition: 500ms cubic-bezier(0.37, 0.37, 0.11, 1.25);
-  }
-  
-  .number-scroll-digit {
-    height: 10%;
-  }
-  
 
-  
-  .number-scroll-column.increase {
-    animation: pulseGreen 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+  50% {
+    color: #00b200;
   }
-  
-  .number-scroll-column.decrease {
-    animation: pulseRed 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+}
+
+@keyframes pulseRed {
+  0%,
+  100% {
+    color: black;
   }
-  
-  @keyframes pulseGreen {
-    0%,
-    100% {
-      color: black;
-    }
-  
-    50% {
-      color: #00b200;
-    }
+
+  50% {
+    color: red;
   }
-  
-  @keyframes pulseRed {
-    0%,
-    100% {
-      color: black;
-    }
-  
-    50% {
-      color: red;
-    }
-  }
-  
+}
