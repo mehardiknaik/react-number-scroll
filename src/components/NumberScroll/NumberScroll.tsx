@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { usePrevious } from "../hooks";
+import { NumberScrollProps } from "./NumberScroll.types";
 import "./style.css";
 
 const formatForDisplay = (number: number) => {
@@ -44,7 +45,7 @@ const NumberColumn = ({ digit, delta }: any) => {
   );
 };
 
-const NumberScroll = ({ number }: { number: number }) => {
+const NumberScroll = ({ number }:NumberScrollProps) => {
   const numArray = formatForDisplay(number);
   const previousNumber: any = usePrevious(number);
 

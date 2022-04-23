@@ -35,6 +35,9 @@
     "react": ">=16.0.0"
   },
   "homepage": "https://github.com/mehardiknaik/react-number-scroll#readme",
+  "bugs": {
+    "url": "https://github.com/mehardiknaik/react-number-scroll/issues"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.1.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
