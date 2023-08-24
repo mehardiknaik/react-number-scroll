@@ -3,11 +3,18 @@ import { usePrevious } from "../hooks";
 import { NumberScrollProps } from "./NumberScroll.types";
 import "./style.css";
 
-const formatForDisplay = (number: number) => {
-  return Math.max(number).toFixed(2).split("").reverse();
+const formatForDisplay = (number: number, decimal: number) => {
+  return Math.max(number)
+    .toLocaleString("en-US", {
+      minimumFractionDigits: decimal,
+      maximumFractionDigits: decimal,
+    })
+    .split("")
+    .reverse();
 };
 
 const DecimalColumn: React.FC<{ digit: string }> = ({ digit }) => {
+  console.log(digit);
   return (
     <div>
       <span>{digit}</span>
@@ -45,20 +52,26 @@ const NumberColumn = ({ digit, delta }: any) => {
   );
 };
 
-const NumberScroll = ({ number }:NumberScrollProps) => {
-  const numArray = formatForDisplay(number);
+const NumberScroll = ({
+  number,
+  style,
+  decimal = 0,
+  className,
+}: NumberScrollProps) => {
+  const numArray = formatForDisplay(number, decimal);
   const previousNumber: any = usePrevious(number);
+  console.log(numArray);
 
   let delta: string = "";
   if (number > previousNumber) delta = "increase";
   if (number < previousNumber) delta = "decrease";
   return (
-    <div className="number-scroll-view">
+    <div className={`number-scroll-view ${className}`} style={style}>
       {numArray.map((number, index) =>
-        number === "." || number === "-" ? (
-          <DecimalColumn key={index} digit={number} />
-        ) : (
+        Boolean(parseInt(number)) ? (
           <NumberColumn key={index} digit={parseFloat(number)} delta={delta} />
+        ) : (
+          <DecimalColumn key={index} digit={number} />
         )
       )}
     </div>

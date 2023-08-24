@@ -4,9 +4,9 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   overflow: hidden;
-  font-size: 56px;
+  font-size: inherit;
   position: relative;
-  color: black;
+  color: inherit;
 }
 
 .number-placeholder {
