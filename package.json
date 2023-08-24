@@ -1,6 +1,6 @@
 {
   "name": "@hardiknaik/react-number-scroll",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "react library for animate number with robinhood or groww style",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
