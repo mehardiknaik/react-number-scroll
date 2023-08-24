@@ -4,7 +4,7 @@
     "module": "esnext",
     "jsx": "react",
     "sourceMap": false,
-    "outDir": "dist",
+    "outDir": "./",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "declarationDir": "types",
+    // "declarationDir": "types",
     "emitDeclarationOnly": true
   },
   "include": ["src"],

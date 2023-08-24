@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { usePrevious } from "../hooks";
+import usePrevious from "./usePrevious";
 import { NumberScrollProps } from "./NumberScroll.types";
 import "./style.css";
 
@@ -65,8 +65,8 @@ const NumberScroll = ({
   if (number < previousNumber) delta = "decrease";
   return (
     <div className={`number-scroll-view ${className}`} style={style}>
-      {numArray.map((number, index) =>
-        Boolean(parseInt(number)) ? (
+      {numArray.map((number: any, index) =>
+        !isNaN(number) ? (
           <NumberColumn key={index} digit={parseFloat(number)} delta={delta} />
         ) : (
           <DecimalColumn key={index} digit={number} />
