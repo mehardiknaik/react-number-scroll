@@ -54,7 +54,7 @@ const NumberColumn = ({ digit, delta }: any) => {
 
 const NumberScroll = ({
   number,
-  className,
+  className = "",
   style,
   decimal = 0,
 }: NumberScrollProps) => {

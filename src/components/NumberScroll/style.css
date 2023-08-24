@@ -1,5 +1,5 @@
 .number-scroll-view {
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
