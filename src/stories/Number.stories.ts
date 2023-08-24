@@ -9,11 +9,14 @@ const meta: Meta<typeof NumberScroll> = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    number: { control: "number" },
-    decimal: { control: "number" },
-    style: {
-      fontSize: "number",
-    },
+    // number: { control: "number" },
+    // decimal: { control: "number" },
+    // style: {
+    //   fontSize: "number",
+    // },
+    // className: {
+    // control: "string",
+    // },
   },
 };
 
@@ -28,6 +31,6 @@ export const Primary: Story = {
     style: {
       fontSize: 20,
     },
-    decimal: 0,
+    decimal: 2,
   },
 };

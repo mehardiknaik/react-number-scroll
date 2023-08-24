@@ -54,9 +54,9 @@ const NumberColumn = ({ digit, delta }: any) => {
 
 const NumberScroll = ({
   number,
+  className,
   style,
   decimal = 0,
-  className,
 }: NumberScrollProps) => {
   const numArray = formatForDisplay(number, decimal);
   const previousNumber: any = usePrevious(number);
