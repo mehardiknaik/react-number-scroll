@@ -5,7 +5,7 @@ import "./style.css";
 
 const formatForDisplay = (number: number, decimal: number) => {
   return Math.max(number)
-    .toLocaleString("en-US", {
+    .toLocaleString("en-IN", {
       minimumFractionDigits: decimal,
       maximumFractionDigits: decimal,
     })
