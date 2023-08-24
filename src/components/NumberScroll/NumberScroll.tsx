@@ -14,7 +14,6 @@ const formatForDisplay = (number: number, decimal: number) => {
 };
 
 const DecimalColumn: React.FC<{ digit: string }> = ({ digit }) => {
-  console.log(digit);
   return (
     <div>
       <span>{digit}</span>
@@ -60,7 +59,6 @@ const NumberScroll = ({
 }: NumberScrollProps) => {
   const numArray = formatForDisplay(number, decimal);
   const previousNumber: any = usePrevious(number);
-  console.log(numArray);
 
   let delta: string = "";
   if (number > previousNumber) delta = "increase";

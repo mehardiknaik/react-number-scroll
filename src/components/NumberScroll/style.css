@@ -19,7 +19,8 @@
   position: absolute;
   height: 1000%;
   bottom: 0;
-  transition: transform 500ms cubic-bezier(0.37, 0.37, 0.11, 1.25);
+  transition: transform var(--duration, 500ms)
+    cubic-bezier(0.37, 0.37, 0.11, 1.25);
 }
 
 .number-scroll-digit {
@@ -27,31 +28,33 @@
 }
 
 .number-scroll-column.increase {
-  animation: pulseGreen 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+  animation: pulseGreen calc(var(--duration, 500ms) + 100ms)
+    cubic-bezier(0.4, 0, 0.6, 1) 1;
 }
 
 .number-scroll-column.decrease {
-  animation: pulseRed 600ms cubic-bezier(0.4, 0, 0.6, 1) 1;
+  animation: pulseRed calc(var(--duration, 500ms) + 100ms)
+    cubic-bezier(0.4, 0, 0.6, 1) 1;
 }
 
 @keyframes pulseGreen {
   0%,
   100% {
-    color: black;
+    color: inherit;
   }
 
   50% {
-    color: #00b200;
+    color: var(--increment, #00b200);
   }
 }
 
 @keyframes pulseRed {
   0%,
   100% {
-    color: black;
+    color: inherit;
   }
 
   50% {
-    color: red;
+    color: var(--decerement, red);
   }
 }

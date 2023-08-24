@@ -30,6 +30,7 @@ export const Primary: Story = {
     number: 123,
     style: {
       fontSize: 20,
+      ["--duration" as string]: "1000ms",
     },
     decimal: 2,
   },
